@@ -1,0 +1,56 @@
+/* Fonts /----------------------------------------------- */
+@font-face {
+    font-family: "vazir_light";
+    src: url("../fonts/Vazir-Light-FD-WOL.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "vazir_medium";
+    src: url("../fonts/Vazir-Medium-FD-WOL.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "vazir_bold";
+    src: url("../fonts/Vazir-Bold-FD-WOL.woff2") format("woff2");
+}
+/* ---------------------------------------------------- */
+
+/* Root /---------------------------------------------- */
+:root {
+    --main_color1:#2f3e46;
+    --main_color2:#354f52;
+    --main_color3:#52796f;
+    --main_color4:#84a98c;
+    --main_color5:#cad2c5;
+
+    --grey_color1:#102a42;
+    --grey_color2:#617d98;
+    --grey_color3:#f1f5f8;
+
+    --White_color:#ffffff;
+
+    --font_light:"vazir_light", sans-serif;
+    --font_medium: "vazir_medium", sans-serif;
+    --font_bold:"vazir_bold", sans-serif;
+    --transition: all 0.3s linear;
+    --radius: 0.5rem;
+    --light_shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark_shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --max_width: 1170px;
+
+}
+/* ---------------------------------------------------- */
+
+/* All Elements /-------------------------------------- */
+    *, ::before, ::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+/* ---------------------------------------------------- */
+/* Fonts /----------------------------------------------- */
+/* ---------------------------------------------------- */
+/* Fonts /----------------------------------------------- */
+/* ---------------------------------------------------- */
+/* Fonts /----------------------------------------------- */
+/* ---------------------------------------------------- */
