@@ -163,6 +163,19 @@ p {
         align-items: center;
     }
 }
+
+.navbar_fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    /* background-color: var(--White_color); */
+    box-shadow: var(--light_shadow);
+}
+.hero {
+    height: 330vh;
+    background: red;
+}
 /* ---------------------------------------------------- */
 /* Fonts /----------------------------------------------- */
 /* ---------------------------------------------------- */
