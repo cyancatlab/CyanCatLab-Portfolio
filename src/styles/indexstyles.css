@@ -1,54 +1,168 @@
 /* Fonts /----------------------------------------------- */
 @font-face {
-    font-family: "vazir_light";
-    src: url("../fonts/Vazir-Light-FD-WOL.woff2") format("woff2");
+  font-family: "vazir_light";
+  src: url("../fonts/Vazir-Light-FD-WOL.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: "vazir_medium";
-    src: url("../fonts/Vazir-Medium-FD-WOL.woff2") format("woff2");
+  font-family: "vazir_medium";
+  src: url("../fonts/Vazir-Medium-FD-WOL.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: "vazir_bold";
-    src: url("../fonts/Vazir-Bold-FD-WOL.woff2") format("woff2");
+  font-family: "vazir_bold";
+  src: url("../fonts/Vazir-Bold-FD-WOL.woff2") format("woff2");
 }
 /* ---------------------------------------------------- */
 
-/* Root /---------------------------------------------- */
+/* Global /-------------------------------------------- */
 :root {
-    --main_color1:#2f3e46;
-    --main_color2:#354f52;
-    --main_color3:#52796f;
-    --main_color4:#84a98c;
-    --main_color5:#cad2c5;
+  --main_color1: #2f3e46;
+  --main_color2: #354f52;
+  --main_color3: #52796f;
+  --main_color4: #84a98c;
+  --main_color5: #cad2c5;
 
-    --grey_color1:#102a42;
-    --grey_color2:#617d98;
-    --grey_color3:#f1f5f8;
+  --grey_color1: #102a42;
+  --grey_color2: #617d98;
+  --grey_color3: #f1f5f8;
 
-    --White_color:#ffffff;
+  --White_color: #ffffff;
 
-    --font_light:"vazir_light", sans-serif;
-    --font_medium: "vazir_medium", sans-serif;
-    --font_bold:"vazir_bold", sans-serif;
-    --transition: all 0.3s linear;
-    --radius: 0.5rem;
-    --light_shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    --dark_shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    --max_width: 1170px;
+  --font_light: "vazir_light", sans-serif;
+  --font_medium: "vazir_medium", sans-serif;
+  --font_bold: "vazir_bold", sans-serif;
+  --transition: all 0.3s linear;
+  --radius: 0.5rem;
+  --light_shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark_shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max_width: 1170px;
+}
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+    font-family: var(--font_medium);
+    background-color: var(--White_color);
+    line-height: 1.5;
+    font-size: 0.875rem;
+}
+ul {
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+img {
+    width: 100%;
+    display: flex;
+}
+h1, h2, h3, h4 {
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+    font-family: var(--font_medium);
+}
+
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.25rem;
+}
+h4 {
+    font-size: 0.875rem;
+}
+
+p {
+    margin-bottom: 1.25rem;
+    color: var(--grey_color2);
+}
+
+@media screen and (min-width: 800px) {
+    h1 {
+        font-size: 4rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+    h3 {
+        font-size: 1.75rem;
+    }
+    h4 {
+        font-size: 1rem;
+    }
+    body {
+        font-size: 1rem;
+    }
+    h1, h2, h3, h4 {
+        line-height: 1;
+    }
 }
 /* ---------------------------------------------------- */
+/* NAV /----------------------------------------------- */
+.nav_links {
+    display: none;
+}
+.nav {
+    background-color: var(--main_color5);
+    height: 4.5rem;
+    padding: 1rem;
+}
+.nav_center {
+    width: 100%;
+    max-width: var(--max_width);
+    margin: 0 auto;
+}
+.nav_header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+}
+.nav_header h3 {
+    font-size: 1.75rem;
+}
 
-/* All Elements /-------------------------------------- */
-    *, ::before, ::after {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+.nav_btn {
+    justify-self: end;
+    background: transparent;
+    border-color: transparent;
+    color: var(--main_color2);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+    .nav_btn {
+        display: none;
     }
-/* ---------------------------------------------------- */
-/* Fonts /----------------------------------------------- */
+    .nav_links {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 2rem;
+        justify-items: center;
+        justify-self: end;
+    }
+    .nav_links a {
+        color: var(--grey_color1);
+        transition: var(--transition);
+    }
+    .nav_links a:hover {
+        color: var(--main_color4);
+    }
+    .nav_center {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+    }
+}
 /* ---------------------------------------------------- */
 /* Fonts /----------------------------------------------- */
 /* ---------------------------------------------------- */
